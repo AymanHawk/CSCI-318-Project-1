@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
     <style>
         body {
+            height: 100vh;
             padding: 10px;
             font-family: 'Nunito', sans-serif;
-            overflow: hidden;
+            background-color: #ffffff;
         }
 
         .header {
@@ -34,20 +35,30 @@
             height: 55vh;
         }
 
+        .member-item{
+            display: flex;
+            flex-direction: row; /* Adjusted this line */
+            align-items: center;
+        }
+
         .member-panel {
+            display: flex;
+            flex-direction: column; /* Adjusted this line */
+            text-align: left;
             background-color: #f0f0f0;
             padding: 10px;
             margin: 0 10px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.349);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
             width: 400px;
             height: 50vh;
             transform: scale(0);
             animation: fadeIn 0.5s cubic-bezier(0.29, 1.01, 0.52, 0.99) forwards;
+            overflow: hidden;
         }
 
-        h2 {
-            text-align: center;
+        .memoji {
+            height: 150px;
         }
 
         @keyframes fadeIn {
@@ -58,6 +69,10 @@
             100% {
                 transform: scale(1);
             }
+        }
+
+        .member-panel img {
+            margin-bottom: 10px; /* Adjust the margin to control the space between the name and image */
         }
 
         .member-panel:nth-child(1) {
@@ -75,6 +90,33 @@
         .member-panel:nth-child(4) {
             animation-delay: 2.5s;
         }
+
+        .names {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .biography{
+            padding: 10px;
+        }
+
+        .code-snippit-container{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+            background-color: #f0f0f0;
+            min-height: 50vh;
+        }
+
+        .code{
+            font-family: monospace;
+        }
+
+        zzz{
+            color: purple;
+        }
+
     </style>
     <title>CSCI 318 Project 1</title>
 </head>
@@ -85,20 +127,85 @@
     </div>
     <div class="container">
         <div class="member-panel">
-            <h2>Ayman Haque</h2>
+            <div class="member-item">
+                <img class="memoji" src="images/memoji-wink.png" alt="">
+                <h2 class="names">Ayman Haque <br/> <div style="font-size: 16px;"> Lead Developer </div> </h2>
+            </div>
+            <div class="biography">
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+            </div>
         </div>
         <div class="member-panel">
-            <h2>Mahdi Ivan</h2>
+            <div class="member-item">
+                <img class="memoji" src="images/memoji-wink.png" alt="">
+                <h2 class="names">Mahdi Ivan  <br/> <div style="font-size: 16px;"> UX/UI Designer </div></h2>
+            </div>
+            <div class="biography">
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            </div>
         </div>
         <div class="member-panel">
-            <h2>Jaden Walker</h2>
+            <div class="member-item">
+                <img class="memoji" src="images/memoji-wink.png" alt="">
+                <h2 class="names">Jaden Walker  <br/> <div style="font-size: 16px;"> LaTeX Reseacher </div></h2>
+            </div>
+            <div class="biography">
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            </div>
         </div>
         <div class="member-panel">
-            <h2>Elizabeth Stehnach</h2>
+            <div class="member-item">
+                <img class="memoji" src="images/memoji-wink.png" alt="">
+                <h2 class="names">Elizabeth Stehnach  <br/> <div style="font-size: 16px;"> LaTeX Developer </div></h2>
+            </div>
+            <div class="biography">
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            </div>
         </div>
     </div>
 
-    <h1>Hey</h1>
+    <div class="code-snippit-container">
+        <h2> Some Code Snippits </h2>
+        <pre class="code">
+            .<zzz>member-panel</zzz> {
+                display: flex;
+                flex-direction: column; /* Adjusted this line */
+                text-align: left;
+                background-color: #f0f0f0;
+                padding: 10px;
+                margin: 0 10px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+                width: 400px;
+                height: 50vh;
+                transform: scale(0);
+                animation: fadeIn 0.5s cubic-bezier(0.29, 1.01, 0.52, 0.99) forwards;
+            }
+    
+            .<zzz>memoji</zzz> {
+                height: 150px;
+            }
+    
+            @keyframes fadeIn {
+                0% {
+                    transform: scale(0);
+                }
+    
+                100% {
+                    transform: scale(1);
+                }
+            }
+        </pre>
+    </div>
+    <br><br><br>
 </body>
 
 </html>
