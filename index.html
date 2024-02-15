@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
     <style>
-        body{
-            height: 100vh;
-            padding:0;
+        body {
+            padding: 10px;
+            font-family: 'Nunito', sans-serif;
+            overflow: hidden;
         }
-        .wrapper{
-            border: 10px solid black;
+
+        .header {
+            display: flex;
+            justify-content: center;
+            animation: slideDown 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            height: 55vh;
+        }
+
+        .member-panel {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.349);
+            width: 400px;
+            height: 50vh;
+            transform: scale(0);
+            animation: fadeIn 0.5s cubic-bezier(0.29, 1.01, 0.52, 0.99) forwards;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .member-panel:nth-child(1) {
+            animation-delay: 1s;
+        }
+
+        .member-panel:nth-child(2) {
+            animation-delay: 1.5s;
+        }
+
+        .member-panel:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .member-panel:nth-child(4) {
+            animation-delay: 2.5s;
         }
     </style>
     <title>CSCI 318 Project 1</title>
 </head>
+
 <body>
-    <h1>Hey there!</h1>
-    <div class="wrapper">
-        <div class="container" >
-            <h2>Group Members</h2>
-            <ul>
-                <li>Ayman Haque</li>
-                <li>Mahdi Ivan</li>
-                <li>Jaden Walker</li>
-                <li>Elizabeth Stehnach</li>
-            </ul>
+    <div class="header">
+        <h1>Meet The Team</h1>
+    </div>
+    <div class="container">
+        <div class="member-panel">
+            <h2>Ayman Haque</h2>
+        </div>
+        <div class="member-panel">
+            <h2>Mahdi Ivan</h2>
+        </div>
+        <div class="member-panel">
+            <h2>Jaden Walker</h2>
+        </div>
+        <div class="member-panel">
+            <h2>Elizabeth Stehnach</h2>
         </div>
     </div>
+
+    <h1>Hey</h1>
 </body>
+
 </html>
