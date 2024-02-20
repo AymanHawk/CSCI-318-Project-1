@@ -131,6 +131,12 @@
             padding: 10px;
         }
 
+        .slides {
+            height: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+        }
+
         .technologies {
             margin: 10px;
             padding: 50px;
@@ -161,6 +167,21 @@
             ;
             min-height: 50vh;
         }
+
+        .code-snippit-container2 {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+        background-color: #c1e1c5; /* Light green background color */
+        min-height: 50vh;
+        width: min-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; /* Added to distribute items along the main axis */
+    }
+
 
         .pytex {
             margin-left: 30px;
@@ -273,21 +294,72 @@
             <h1>PythonTex</h1>
 
             <ul>
-                <li> Python: A popular, versatile programming language.</li>
+                <li>Python: A popular, versatile programming language.</li>
                 <li>LaTeX: A powerful typesetting system used for scientific documents, books, and complex layouts.</li>
                 <li>PythonTeX is a package that seamlessly integrates Python code into your LaTeX documents.</li>
             </ul>
         </div>
     </div>
+    <div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;">
+        <img class="slides" src="images/slide1.png" alt="">
+    </div>
+    <div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;">
+        <img class="slides" src="images/slide2.png" alt="">
+    </div>
+    <div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;">
+        <img class="slides" src="images/slide3.png" alt="">
+    </div>
+    <div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;">
+        <img class="slides" src="images/slide4.png" alt="">
+    </div>
 
     <div class="code-snippit-container">
-        <h2> A Code Snippit... </h2>
+        <h2> CSS </h2>
         <pre class="code">
-            .<zzz>member-panel</zzz> {
+            body {
+                height: 100vh;
+                padding: 10px;
+                font-family: 'Nunito', sans-serif;
+                background-color: #ffffff;
+            }
+    
+            .header {
+                display: flex;
+                justify-content: center;
+                animation: slideDown 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+                color: #03430c;
+                ;
+                /* Dark pink text color */
+            }
+    
+            @keyframes slideDown {
+                0% {
+                    transform: translateY(-100%);
+                }
+    
+                100% {
+                    transform: translateY(0);
+                }
+            }
+    
+            .container {
+                display: flex;
+                justify-content: center;
+                height: 55vh;
+            }
+    
+            .member-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+    
+            .member-panel {
                 display: flex;
                 flex-direction: column;
                 text-align: left;
-                background-color: #f0f0f0;
+                background-color: #c1e1c5;
+                ;
                 padding: 10px;
                 margin: 0 10px;
                 border-radius: 10px;
@@ -296,13 +368,14 @@
                 height: 50vh;
                 transform: scale(0);
                 animation: fadeIn 0.5s cubic-bezier(0.29, 1.01, 0.52, 0.99) forwards;
+                overflow: hidden;
             }
     
-            .<zzz>memoji</zzz> {
+            .memoji {
                 height: 150px;
             }
     
-            <zzy> @keyframes </zzy>fadeIn {
+            @keyframes fadeIn {
                 0% {
                     transform: scale(0);
                 }
@@ -311,7 +384,246 @@
                     transform: scale(1);
                 }
             }
+    
+            .member-panel img {
+                margin-bottom: 10px;
+            }
+    
+            .latex {
+                height: 500px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+            }
+    
+            .tech-icons {
+                margin-bottom: 10px;
+                height: 400px;
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeInUp 1s ease-out forwards;
+                animation-delay: 3s;
+            }
+    
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+    
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            .member-panel:nth-child(1) {
+                animation-delay: 1s;
+            }
+    
+            .member-panel:nth-child(2) {
+                animation-delay: 1.5s;
+            }
+    
+            .member-panel:nth-child(3) {
+                animation-delay: 2s;
+            }
+    
+            .member-panel:nth-child(4) {
+                animation-delay: 2.5s;
+            }
+    
+            .names {
+                flex-direction: row;
+                align-items: center;
+            }
+    
+            .biography {
+                padding: 10px;
+            }
+    
+            .slides {
+                height: 1000px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+            }
+    
+            .technologies {
+                margin: 10px;
+                padding: 50px;
+                border-radius: 10px;
+                min-height: 50vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .bio {
+                margin: 10px;
+                padding: 50px;
+                border-radius: 10px;
+                border: 1px solid black;
+                min-height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .code-snippit-container {
+                margin: 10px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+                background-color: #c1e1c5;
+                ;
+                min-height: 50vh;
+            }
+    
+            .code-snippit-container2 {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+            background-color: #c1e1c5; /* Light green background color */
+            min-height: 50vh;
+            width: min-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between; /* Added to distribute items along the main axis */
+        }
+    
+    
+            .pytex {
+                margin-left: 30px;
+                font-size: 20px;
+            }
+    
+            .code {
+                font-family: monospace;
+            }
+    
+            zzz {
+                color: #0004ff;
+            }
+    
+            zzy {
+                color: #0cb1b1;
+            }
         </pre>
+    </div>
+
+    <div class="code-snippit-container">
+        <h2> HTML </h2>
+        <pre>
+            &lt;div class="header"&gt;
+                &lt;h1&gt;Meet The Team&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="member-panel"&gt;
+                    &lt;div class="member-item"&gt;
+                        &lt;img class="memoji" src="images/memoji-wink.png" alt=""&gt;
+                        &lt;h2 class="names"&gt;Ayman Haque &lt;br /&gt;
+                            &lt;div style="font-size: 16px;"&gt; Lead Developer &lt;/div&gt;
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;div class="biography"&gt;
+                        Ayman is our lead developer, responsible for overseeing the technical aspects of our projects and
+                        ensuring smooth development processes.
+                        &lt;br&gt;
+                        &lt;br&gt;
+                        Hello there, I'm Ayman and I am a senior working apart of my 4+1 B.S / M.S degree in computer science.
+                        My strongest languages are Java and Javascript, for backend and front end respectively.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class="member-panel"&gt;
+                    &lt;div class="member-item"&gt;
+                        &lt;img class="memoji" src="images/memoji1-removebg-preview.png" alt=""&gt;
+                        &lt;h2 class="names"&gt;Mahdi Ivan &lt;br /&gt;
+                            &lt;div style="font-size: 16px;"&gt; UX/UI Designer &lt;/div&gt;
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;div class="biography"&gt;
+                        Mahdi is our UX/UI designer, bringing creativity and user-centered design principles to enhance the
+                        overall user experience of our projects.
+                        &lt;br&gt;
+                        &lt;br&gt;
+                        Hello everyone, my name is Mahdi and I am a junior working towards my bachelor's degree in computer
+                        science. I am strongest in Java, Python, and Arduino. I hope to learn a lot in this course. Also my
+                        hobbies are 3d printing and working on cars.
+        
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class="member-panel"&gt;
+                    &lt;div class="member-item"&gt;
+                        &lt;img class="memoji" src="images/memoji2-removebg-preview.png" alt=""&gt;
+                        &lt;h2 class="names"&gt;Jaden Walker &lt;br /&gt;
+                            &lt;div style="font-size: 16px;"&gt; LaTeX Researcher &lt;/div&gt;
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;div class="biography"&gt;
+                        Jaden is our LaTeX researcher, dedicated to exploring and implementing LaTeX solutions to ensure
+                        high-quality document rendering for our projects.
+                        &lt;br&gt;
+                        &lt;br&gt;
+                        Hi, my name is Jaden and I am a junior computer science student. I am proficient in Java, Python,
+                        and JavaScript which I use to build full stack web applications. My hobbies include playing sports,
+                        video games, and cooking.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class="member-panel"&gt;
+                    &lt;div class="member-item"&gt;
+                        &lt;img class="memoji" src="images/memoji3-removebg-preview.png" alt=""&gt;
+                        &lt;h2 class="names"&gt;Elizabeth Stehnach &lt;br /&gt;
+                            &lt;div style="font-size: 16px;"&gt; LaTeX Developer &lt;/div&gt;
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;div class="biography"&gt;
+                        Elizabeth is our LaTeX developer, contributing her expertise to the development and optimization of
+                        LaTeX-related functionalities in our projects.
+                        &lt;br&gt;
+                        &lt;br&gt;
+                        Hi, I'm Elizabeth and I am a junior computer science student. I'm also minoring in math. I have
+                        programming experience with Java and SQL, as well as some Python and HTML. My hobbies include reading
+                        and playing video games.
+        
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        
+            &lt;div class="technologies"&gt;
+                &lt;img class="tech-icons" src="images/Amazon_Web_Services_Logo.svg" alt=""&gt;
+                &lt;img class="tech-icons" src="images/github-actions-removebg-preview.png" alt=""&gt;
+            &lt;/div&gt;
+        
+            &lt;div class="code-snippit-container" style="margin-bottom: 20px; display: flex; flex-direction: row;"&gt;
+                &lt;img class="latex" src="images/latexify-1.png" alt=""&gt;
+                &lt;div class="pytex"&gt;
+                    &lt;h1&gt;PythonTex&lt;/h1&gt;
+        
+                    &lt;ul&gt;
+                        &lt;li&gt;Python: A popular, versatile programming language.&lt;/li&gt;
+                        &lt;li&gt;LaTeX: A powerful typesetting system used for scientific documents, books, and complex layouts.&lt;/li&gt;
+                        &lt;li&gt;PythonTeX is a package that seamlessly integrates Python code into your LaTeX documents.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;"&gt;
+                &lt;img class="slides" src="images/slide1.png" alt=""&gt;
+            &lt;/div&gt;
+            &lt;div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;"&gt;
+                &lt;img class="slides" src="images/slide2.png" alt=""&gt;
+            &lt;/div&gt;
+            &lt;div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;"&gt;
+                &lt;img class="slides" src="images/slide3.png" alt=""&gt;
+            &lt;/div&gt;
+            &lt;div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;"&gt;
+                &lt;img class="slides" src="images/slide4.png" alt=""&gt;
+            &lt;/div&gt;
+        </pre>
+        
     </div>
 
     <br><br><br>
