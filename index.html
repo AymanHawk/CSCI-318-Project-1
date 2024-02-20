@@ -17,7 +17,8 @@
             display: flex;
             justify-content: center;
             animation: slideDown 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
-            color: #03430c; ;
+            color: #03430c;
+            ;
             /* Dark pink text color */
         }
 
@@ -47,7 +48,8 @@
             display: flex;
             flex-direction: column;
             text-align: left;
-            background-color: #c1e1c5; ;
+            background-color: #c1e1c5;
+            ;
             padding: 10px;
             margin: 0 10px;
             border-radius: 10px;
@@ -75,6 +77,12 @@
 
         .member-panel img {
             margin-bottom: 10px;
+        }
+
+        .latex {
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
         }
 
         .tech-icons {
@@ -133,13 +141,30 @@
             align-items: center;
         }
 
+        .bio {
+            margin: 10px;
+            padding: 50px;
+            border-radius: 10px;
+            border: 1px solid black;
+            min-height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .code-snippit-container {
             margin: 10px;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
-            background-color: #c1e1c5; ;
+            background-color: #c1e1c5;
+            ;
             min-height: 50vh;
+        }
+
+        .pytex {
+            margin-left: 30px;
+            font-size: 20px;
         }
 
         .code {
@@ -149,6 +174,7 @@
         zzz {
             color: #0004ff;
         }
+
         zzy {
             color: #0cb1b1;
         }
@@ -171,16 +197,16 @@
             <div class="biography">
                 Ayman is our lead developer, responsible for overseeing the technical aspects of our projects and
                 ensuring smooth development processes.
+                <br>
+                <br>
+                Hello there, I'm Ayman and I am a senior working apart of my 4+1 B.S / M.S degree in computer science.
+                My strongest languages are Java and Javascript, for backend and front end respectively.
             </div>
         </div>
 
         <div class="member-panel">
             <div class="member-item">
-                <svg class="memoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="150"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="7" r="4"></circle>
-                    <path d="M5 12s-1 4 2 4h10s2-1 2-4"></path>
-                </svg>
+                <img class="memoji" src="images/memoji1-removebg-preview.png" alt="">
                 <h2 class="names">Mahdi Ivan <br />
                     <div style="font-size: 16px;"> UX/UI Designer </div>
                 </h2>
@@ -188,16 +214,18 @@
             <div class="biography">
                 Mahdi is our UX/UI designer, bringing creativity and user-centered design principles to enhance the
                 overall user experience of our projects.
+                <br>
+                <br>
+                Hello everyone, my name is Mahdi and I am a junior working towards my bachelor's degree in computer
+                science. I am strongest in Java, Python, and Arduino. I hope to learn a lot in this course. Also my
+                hobbies are 3d printing and working on cars.
+
             </div>
         </div>
 
         <div class="member-panel">
             <div class="member-item">
-                <svg class="memoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="150"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="7" r="4"></circle>
-                    <path d="M5 12s-1 4 2 4h10s2-1 2-4"></path>
-                </svg>
+                <img class="memoji" src="images/memoji2-removebg-preview.png" alt="">
                 <h2 class="names">Jaden Walker <br />
                     <div style="font-size: 16px;"> LaTeX Researcher </div>
                 </h2>
@@ -205,16 +233,17 @@
             <div class="biography">
                 Jaden is our LaTeX researcher, dedicated to exploring and implementing LaTeX solutions to ensure
                 high-quality document rendering for our projects.
+                <br>
+                <br>
+                Hi, my name is Jaden and I am a junior computer science student. I am proficient in Java, Python,
+                and JavaScript which I use to build full stack web applications. My hobbies include playing sports,
+                video games, and cooking.
             </div>
         </div>
 
         <div class="member-panel">
             <div class="member-item">
-                <svg class="memoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="150"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="7" r="4"></circle>
-                    <path d="M5 12s-1 4 2 4h10s2-1 2-4"></path>
-                </svg>
+                <img class="memoji" src="images/memoji3-removebg-preview.png" alt="">
                 <h2 class="names">Elizabeth Stehnach <br />
                     <div style="font-size: 16px;"> LaTeX Developer </div>
                 </h2>
@@ -222,6 +251,12 @@
             <div class="biography">
                 Elizabeth is our LaTeX developer, contributing her expertise to the development and optimization of
                 LaTeX-related functionalities in our projects.
+                <br>
+                <br>
+                Hi, I'm Elizabeth and I am a junior computer science student. I'm also minoring in math. I have
+                programming experience with Java and SQL, as well as some Python and HTML. My hobbies include reading
+                and playing video games.
+
             </div>
         </div>
     </div>
@@ -232,9 +267,21 @@
         <img class="tech-icons" src="images/github-actions-removebg-preview.png" alt="">
     </div>
 
+    <div class="code-snippit-container" style="margin-bottom: 20px; display: flex; flex-direction: row;">
+        <img class="latex" src="images/latexify-1.png" alt="">
+        <div class="pytex">
+            <h1>PythonTex</h1>
+
+            <ul>
+                <li> Python: A popular, versatile programming language.</li>
+                <li>LaTeX: A powerful typesetting system used for scientific documents, books, and complex layouts.</li>
+                <li>PythonTeX is a package that seamlessly integrates Python code into your LaTeX documents.</li>
+            </ul>
+        </div>
+    </div>
 
     <div class="code-snippit-container">
-        <h2> Some Code Snippits </h2>
+        <h2> A Code Snippit... </h2>
         <pre class="code">
             .<zzz>member-panel</zzz> {
                 display: flex;
