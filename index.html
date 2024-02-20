@@ -169,18 +169,20 @@
         }
 
         .code-snippit-container2 {
-        margin: 10px;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
-        background-color: #c1e1c5; /* Light green background color */
-        min-height: 50vh;
-        width: min-content;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between; /* Added to distribute items along the main axis */
-    }
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+            background-color: #c1e1c5;
+            /* Light green background color */
+            min-height: 50vh;
+            width: min-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            /* Added to distribute items along the main axis */
+        }
 
 
         .pytex {
@@ -311,6 +313,214 @@
     </div>
     <div class="code-snippit-container2" style="margin-bottom: 20px; display: flex; flex-direction: row;">
         <img class="slides" src="images/slide4.png" alt="">
+    </div>
+
+    <div class="code-snippit-container">
+        <pre>
+            \documentclass[pdf]{beamer}
+\mode<presentation>{\usetheme{CambridgeUS}}
+\usecolortheme{beaver}
+\useinnertheme{rounded}
+\useoutertheme{tree}
+\usepackage{listings}
+\usepackage{pythontex}
+\lstset{
+ language=Python, % Set the language to Python
+ basicstyle=\ttfamily, % Use a monospace font
+ keywordstyle=\color{orange},
+ stringstyle=\color{blue},
+ commentstyle=\color{red},
+ breaklines=true, % Allow line breaks
+ frame=single, % Add a frame around the code 
+}
+\title[LaTeX Presentation]{Python in Latex?} %[x] means x is the short title
+\author{Ayman Haque, Mahdi Ivan, Jaden Walker, Elizabeth Stehnach}
+\date{2/20/24}
+\begin{document}
+\begin{frame}
+ \titlepage
+\end{frame}
+\begin{frame}{Table of Contents}
+ \tableofcontents
+\end{frame}
+\section{What is Python?}
+\begin{frame}{What is Python?}
+\begin{itemize}
+ \item{Python is a high-level, object-oriented programming language}
+ \item {Python features an easy-to-learn syntax, making it accessible to beginners and experienced programmers. }
+ \item{It offers seamless integration with other languages, allowing developers to use existing codebases written in other languages such as Java or C++}
+ \item{Python is known for providing a wide range of built-in functions and modules for various tasks such as text processing, web development, and data analysis.}
+\end{itemize}
+\end{frame}
+\subsection{Basic Example of a Python Code}
+
+\begin{lstlisting}[caption={Python Example}]
+list = ["Welcome,","this","is", "a", "list"]
+string = "This creates a new string"
+for i in range(100):
+ print("Hello, Class of CSCI318!")
+def example(string):
+ print(string)
+
+example("Here is an example of a function")
+\end{lstlisting}
+\begin{frame}{Table of Contents}
+ \tableofcontents
+\end{frame}
+\section{What is PythonTeX?}
+\begin{frame}{What is PythonTeX?}
+\begin{itemize}
+ \item{PythonTeX is a LaTeX package that enables the execution of Python code within LaTeX documents. }
+ \item{It supports a wide range of programming languages, including Python, JavaScript, Octave, etc.}
+ \item{PythonTeX is fully open source and free to use for the public}
+ \item{For detailed documentation and further information, users can refer to the official PythonTeX repository on GitHub: "\href{https://github.com/gpoore/pythontex}{https://github.com/gpoore/pythontex}". }
+\end{itemize}
+\end{frame}
+\subsection{Why should you use PythonTeX?}
+\begin{frame}{Why should you use PythonTeX?}
+\begin{itemize}
+ \item{Python can make even the hardest math problems easier. }
+ \item{Using Python you can even repeat latex code.}
+ \item{It can even automate document generation.}
+ \item {Python easily solves issues Latex would not be able to solve.}
+\end{itemize}
+\end{frame}
+\subsection{Example}
+\begin{frame}{Example}
+You are given a problem that says to find the number of prime numbers from a certain range, Let's say 1 to X. How would you tackle this problem?
+\begin{itemize}
+ \item{First, you would try to store the value of X.}
+ \item{Need a way to check each number to determine if it is a prime}
+ \item{Finally figure out what numbers are prime.}
+\end{itemize}
+Is this possible with latex?
+\end{frame}
+\subsection{Solution}
+\begin{frame}[fragile]{Solution}
+\begin{lstlisting}[caption={Finding the Prime Numbers}, basicstyle=\tiny]
+def is_prime(k):
+    """Check if a number is prime"""
+    if k <= 1:
+        return False
+    elif k <= 3:
+        return True
+    elif k % 2 == 0 or k % 3 == 0:
+        return False
+    i = 5
+    while i * i <= k:
+        if k % i == 0 or k % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def getPrime(x):
+    """Print all prime numbers up to x"""
+    print("Prime numbers from 1 to", x, "are:")
+    for i in range(1, x + 1):
+        if is_prime(i):
+            print(i, end=" ")
+\end{lstlisting}
+PythonTex makes our life so much simpler allowing us to do massive calculations within the Latex software
+\end{frame}
+\begin{frame}{Table of Contents}
+ \tableofcontents
+\end{frame}
+\section{How to Implement Python into Latex}
+\begin{frame}[fragile]{How to Implement Python into Latex}
+When you are implementing PythonTeX you need to give the package name and a special parameter that allows you to embed Python code directly within a LaTeX document.
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{pythontex}
+\begin{document}
+\begin{pycode}
+x = 100
+for i in range (x):
+ print("Hello, World!")
+\end{pycode}
+\end{document}
+\end{lstlisting}
+\end{frame}
+\subsection{Explanation of how PythonTeX is Used}
+\begin{frame}[fragile]{Explanation of how PythonTeX is Used}
+This calls the package PythonTeX allowing latex to utilize python 
+\begin{lstlisting}
+\usepackage{pythontex}
+\end{lstlisting}
+This part of the code allows latex to know where to find your python code
+\begin{lstlisting}
+\begin{pycode}
+# Here would be where your Python code will be implemented
+\end{pycode}
+\end{lstlisting}
+Allows us to use the python within Latex
+\begin{lstlisting}
+\py{ % Here you would call functions/variables}
+\end{lstlisting}
+\end{frame}
+\begin{frame}{Table of Contents}
+ \tableofcontents
+\end{frame}
+\section{How to solve the Example}
+\begin{frame}[fragile]{How to solve the Example}
+\tiny
+\begin{lstlisting}
+\begin{pycode}
+def is_prime(k):
+    """Check if a number is prime"""
+    if k <= 1:
+        return False
+    elif k <= 3:
+        return True
+    elif k % 2 == 0 or k % 3 == 0:
+        return False
+    i = 5
+    while i * i <= k:
+        if k % i == 0 or k % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def getPrime(x):
+    """Print all prime numbers up to x"""
+    print("Prime numbers from 1 to", x, "are:")
+    for i in range(1, x + 1):
+        if is_prime(i):
+            print(i, end=" ")
+\end{pycode}
+\py{getPrime(1000)}
+\end{lstlisting} 
+\end{frame}
+\subsection{Did it work?}
+\begin{frame}[fragile]{Did it work?}
+\begin{pycode}
+def is_prime(k):
+    """Check if a number is prime"""
+    if k <= 1:
+        return False
+    elif k <= 3:
+        return True
+    elif k % 2 == 0 or k % 3 == 0:
+        return False
+    i = 5
+    while i * i <= k:
+        if k % i == 0 or k % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def getPrime(x):
+    """Print all prime numbers up to x"""
+    print("Prime numbers from 1 to", x, "are:")
+    for i in range(1, x + 1):
+        if is_prime(i):
+            print(i, end=" ")
+\end{pycode}
+\py{getPrime(1000)}
+
+\end{frame}
+
+\end{document} 
+        </pre>
     </div>
 
     <div class="code-snippit-container">
@@ -623,7 +833,7 @@
                 &lt;img class="slides" src="images/slide4.png" alt=""&gt;
             &lt;/div&gt;
         </pre>
-        
+
     </div>
 
     <br><br><br>
